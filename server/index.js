@@ -100,7 +100,6 @@ app.post('/newOpp', (req, res) => {
   res.sendStatus(200);
 });
 
-<<<<<<< a5587932b89df2dc5fcc1497368c8ff2643d6329
 app.post('/opportunities', (req, res) => {
   let zipApiUrl = 'https://www.zipcodeapi.com/rest/TMQkh3bB6MHNtwd82NiUZmvp5sQ3vePfDRcJ2YDnQJW4RIB2LWDWuEMAaqmkOU5G/radius.json/' + req.body.zipcode+'/'+'20'+'/'+'mile'
   let nearbyZipCodes = [];
@@ -111,7 +110,5 @@ app.post('/opportunities', (req, res) => {
       retrieveFromDb.getZipCodeSearch(response.data.zip_codes, 5, res);
     }).catch(err => console.log('Err', err));
 })
-=======
 
->>>>>>> Added passport google oAuth
 module.exports = app;
